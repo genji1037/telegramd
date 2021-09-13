@@ -1,5 +1,7 @@
 module github.com/nebulaim/telegramd
 
+go 1.14
+
 require (
 	cloud.google.com/go v0.26.0 // indirect
 	github.com/BurntSushi/toml v0.3.0

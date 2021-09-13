@@ -284,6 +284,7 @@ func (s *clientSessionManager) onSessionData(sessionMsg *sessionData) {
 		glog.Error(err)
 
 		// TODO(@benqi): replay-attack, close client conn.
+		// refer https://core.telegram.org/mtproto/description#message-identifier-msg-id
 		return
 	}
 
@@ -421,8 +422,8 @@ func (s *clientSessionManager) onRpcRequest(requests *rpcApiMessages) {
 
 	for i := 0; i < len(requests.rpcMessages); i++ {
 		var (
-			err         error
-			rpcResult   mtproto.TLObject
+			err       error
+			rpcResult mtproto.TLObject
 		)
 
 		// 初始化metadata
