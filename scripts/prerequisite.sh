@@ -9,7 +9,7 @@
 echo "run etcd-docker..."
 docker run --name etcd-docker -d -p 2379:2379 -p 2380:2380 appcelerator/etcd
 #echo "run mysql-docker..."
-#docker run --name mysql-docker -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:5.7
+docker run --name mysql-docker -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:5.7
 echo "run redis-docker..."
 #docker run --name redis-docker -p 6379:6379 -d redis
 #echo "clone telegramd..."
